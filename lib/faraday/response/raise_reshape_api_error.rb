@@ -2,7 +2,7 @@ require 'faraday'
 require 'multi_json'
 
 module Faraday
-  class Response::RaiseReshapeError < Response::Middleware
+  class Response::RaiseReshapeApiError < Response::Middleware
     def on_complete(response)
       case response[:status].to_i
       when 400

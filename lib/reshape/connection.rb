@@ -1,5 +1,5 @@
 require 'faraday_middleware'
-require 'faraday/response/raise_reshape_error'
+require 'faraday/response/raise_reshape_api_error'
 
 module Reshape
   module Connection

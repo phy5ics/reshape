@@ -22,6 +22,7 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'hashie', '~> 1.2'
   gem.add_dependency 'multi_json', '~> 1.3'
   gem.add_dependency 'multi_xml', '~> 0.5.0'
+  gem.add_dependency 'oauth', '~> 0.4.3'
   
   gem.add_development_dependency 'json'
   gem.add_development_dependency 'maruku'

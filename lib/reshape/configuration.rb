@@ -8,7 +8,9 @@ module Reshape
       :api_version,
       :api_endpoint,
       :web_endpoint,
-      :api_key,
+      :consumer_token,
+      :consumer_secret,
+      :consumer_options,
       :response_format,
       :user_agent].freeze
 
@@ -46,7 +48,8 @@ module Reshape
       self.api_version = DEFAULT_API_VERSION
       self.api_endpoint = DEFAULT_API_ENDPOINT
       self.web_endpoint = DEFAULT_WEB_ENDPOINT
-      self.api_key = nil
+      self.consumer_token = nil
+      self.consumer_secret = nil
       self.response_format = DEFAULT_RESPONSE_FORMAT
       self.user_agent = DEFAULT_USER_AGENT
     end

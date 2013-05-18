@@ -1,3 +1,4 @@
+require 'reshape/authorization'
 require 'reshape/connection'
 require 'reshape/request'
 require 'reshape/error'
@@ -15,6 +16,7 @@ module Reshape
     
     include Reshape::Connection
     include Reshape::Request
+    include Reshape::Authorization
     
   end
 end

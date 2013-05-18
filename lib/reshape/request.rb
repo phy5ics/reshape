@@ -1,10 +1,21 @@
 require 'multi_json'
-require 'multi_xml'
 
 module Reshape
   module Request
     def get(path, options={}, raw=false, force_urlencoded=false)
       request(:get, path, options, raw, force_urlencoded)
+    end
+    
+    def post(path, options={}, raw=false, force_urlencoded=false)
+      request(:post, path, options, raw, force_urlencoded)
+    end
+
+    def put(path, options={}, raw=false, force_urlencoded=false)
+      request(:put, path, options, raw, force_urlencoded)
+    end
+
+    def delete(path, options={}, raw=false, force_urlencoded=false)
+      request(:delete, path, options, raw, force_urlencoded)
     end
 
     private
@@ -22,11 +33,7 @@ module Reshape
       if raw
         response
       else
-        if response_format == 'json'
-          response.body
-        elsif response_format == 'xml'
-          response.body.response
-        end
+        response.body
       end
     end
 

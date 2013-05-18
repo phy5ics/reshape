@@ -21,8 +21,7 @@ describe Faraday::Response do
     context "when HTTP status is #{status}" do
 
       before do
-        stub_get('talks.json?api-key=foo').
-          to_return(:status => status)
+        stub_get('talks.json?api-key=foo').to_return(:status => status)
       end
 
       it "should raise #{exception.name} error" do

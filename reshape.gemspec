@@ -9,7 +9,7 @@ Gem::Specification.new do |gem|
   gem.authors       = ["John Barton"]
   gem.email         = ["jb@phy5ics.com"]
   gem.description   = %q{A client for the Shapeways 3D printing API.}
-  gem.summary       = %q{}
+  gem.summary       = %q{A client for the Shapeways 3D printing API.}
   gem.homepage      = "https://github.com/phy5ics/reshape"
 
   gem.files         = `git ls-files`.split($/)
@@ -21,7 +21,6 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'faraday_middleware', '~> 0.8.4'
   gem.add_dependency 'hashie', '~> 1.2'
   gem.add_dependency 'multi_json', '~> 1.3'
-  gem.add_dependency 'multi_xml', '~> 0.5.0'
   gem.add_dependency 'oauth', '~> 0.4.3'
   
   gem.add_development_dependency 'json'

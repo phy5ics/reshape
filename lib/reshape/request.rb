@@ -22,10 +22,9 @@ module Reshape
 
     def request(method, path, options, raw, force_urlencoded)
       response = connection(raw, force_urlencoded).send(method) do |request|
-        # puts '>>>>>>>>>>>>>>>>>>'
-        path = "#{path}.#{response_format}"
-        options.merge!('api-key' => api_key)
-        # puts "path: #{path}"
+        # path = "#{path}.#{response_format}"
+        # options.merge!('api-key' => api_key)
+        puts "path: #{path}"
         # puts "options: #{options}"
         request.url(path, options)
       end

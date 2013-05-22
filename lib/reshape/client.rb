@@ -2,6 +2,7 @@ require 'reshape/authorization'
 require 'reshape/connection'
 require 'reshape/request'
 require 'reshape/error'
+require 'reshape/client/orders'
 
 module Reshape
   class Client
@@ -17,6 +18,7 @@ module Reshape
     include Reshape::Connection
     include Reshape::Request
     include Reshape::Authorization
+    include Reshape::Client::Orders
     
   end
 end

@@ -21,7 +21,8 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'faraday_middleware', '~> 0.8.4'
   gem.add_dependency 'hashie', '~> 1.2'
   gem.add_dependency 'multi_json', '~> 1.3'
-  gem.add_dependency 'oauth', '~> 0.4.3'
+  gem.add_dependency 'oauth', '~> 0.4'
+  # gem.add_dependency 'simple_oauth'
   
   gem.add_development_dependency 'json'
   gem.add_development_dependency 'maruku'
@@ -29,5 +30,6 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'rspec'
   gem.add_development_dependency 'simplecov'
   gem.add_development_dependency 'webmock'
+  gem.add_development_dependency 'vcr'
   
 end

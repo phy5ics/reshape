@@ -6,21 +6,18 @@ module Reshape
     private
 
     def connection(raw=false, force_urlencoded=false)
-      url = "#{Reshape.api_endpoint}#{Reshape.api_version}"
+      # url = "#{Reshape.api_endpoint}#{Reshape.api_version}"
+      url = "#{Reshape.api_endpoint}"
 
       options = {
         url: url
       }
       
       connection = Faraday.new(options) do |builder|
-        builder.use Faraday::Response::RaiseTedApiError
+        builder.use Faraday::Response::RaiseReshapeApiError
         unless raw
           builder.use FaradayMiddleware::Mashify
-          if response_format == 'json'
-            builder.use FaradayMiddleware::ParseJson
-          elsif response_format == 'xml'
-            builder.use FaradayMiddleware::ParseXml
-          end
+          builder.use FaradayMiddleware::ParseJson
         end
         builder.adapter *adapter
       end

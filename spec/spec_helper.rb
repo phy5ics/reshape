@@ -8,6 +8,21 @@ end
 require 'reshape'
 require 'rspec'
 require 'webmock/rspec'
+require 'vcr'
+
+WebMock.allow_net_connect!
+
+VCR.configure do |c|
+  c.cassette_library_dir = 'spec/fixtures/cassettes'
+  c.stub_with :webmock
+  c.ignore_localhost = true
+  c.allow_http_connections_when_no_cassette = true
+  # c.default_cassette_options = { :record => :none }
+end
+
+RSpec.configure do |c|
+  c.extend VCR::RSpec::Macros
+end
 
 def a_get(url)
   a_request(:get, shapeways_url(url))
@@ -34,5 +49,5 @@ def fixture(file)
 end
 
 def shapeways_url(url)
-  "http://api.shapeways.com/#{url}"
+  "http://api.shapeways.com/#{url}/#{@client.api_version}"
 end

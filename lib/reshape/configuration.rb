@@ -11,9 +11,8 @@ module Reshape
       :consumer_token,
       :consumer_secret,
       :consumer_options,
-      :request_token_path,
-      :access_token_path,
-      :authorize_path,
+      :oauth_token,
+      :oauth_secret,
       :response_format,
       :user_agent].freeze
 
@@ -21,10 +20,7 @@ module Reshape
     DEFAULT_API_VERSION = 'v1'
     DEFAULT_API_ENDPOINT = 'http://api.shapeways.com/'
     DEFAULT_WEB_ENDPOINT = 'http://www.shapeways.com/'
-    DEFAULT_REQUEST_TOKEN_PATH = 'oauth1/request_token'
-    DEFAULT_ACCESS_TOKEN_PATH = 'oauth1/access_token'
-    DEFAULT_AUTHORIZE_PATH = 'login?oauth_token='
-    DEFAULT_USER_AGENT = "Reshape ruby gem #{Reshape::VERSION}".freeze
+    DEFAULT_USER_AGENT = "Reshape Rubygem #{Reshape::VERSION}".freeze
     DEFAULT_RESPONSE_FORMAT = 'json'
 
     attr_accessor(*VALID_OPTIONS_KEYS)
@@ -48,24 +44,16 @@ module Reshape
     def web_endpoint=(value)
       @web_endpoint = File.join(value, "")
     end
-    
-    def request_token_path=(value)
-      @request_token_path = File.join(value, "")
-    end
-    
-    def access_token_path=(value)
-      @access_token_path = File.join(value, "")
-    end
 
     def reset
       self.adapter = DEFAULT_ADAPTER
       self.api_version = DEFAULT_API_VERSION
       self.api_endpoint = DEFAULT_API_ENDPOINT
       self.web_endpoint = DEFAULT_WEB_ENDPOINT
-      self.request_token_path = DEFAULT_REQUEST_TOKEN_PATH
-      self.access_token_path = DEFAULT_ACCESS_TOKEN_PATH
       self.consumer_token = nil
       self.consumer_secret = nil
+      self.oauth_token = nil
+      self.oauth_secret = nil
       self.response_format = DEFAULT_RESPONSE_FORMAT
       self.user_agent = DEFAULT_USER_AGENT
     end

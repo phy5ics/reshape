@@ -18,8 +18,7 @@ module Reshape
       url = "#{Reshape.api_endpoint}"
 
       options = {
-        url: url,
-        proxy: 'http://localhost:8888'
+        url: url
       }
       
       connection = Faraday.new(options) do |builder|

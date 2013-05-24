@@ -6,7 +6,8 @@ describe Reshape::Client::Orders do
       consumer_token: ENV['SHAPEWAYS_CONSUMER_TOKEN'], 
       consumer_secret: ENV['SHAPEWAYS_CONSUMER_SECRET'], 
       oauth_token: ENV['SHAPEWAYS_OAUTH_TOKEN'], 
-      oauth_secret: ENV['SHAPEWAYS_OAUTH_SECRET']
+      oauth_secret: ENV['SHAPEWAYS_OAUTH_SECRET'], 
+      proxy: 'http://localhost:8888'
     })
   end
   

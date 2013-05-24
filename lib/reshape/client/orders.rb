@@ -8,11 +8,11 @@ module Reshape
       
       def post_cart(modelId, materialId, quantity, options={}, raw=false)
         options.merge!(
-          body: {
+          {
             modelId: modelId,
             materialId: materialId,
             quantity: quantity
-        })
+          })
         post("/orders/cart/#{api_version}", options, raw)
       end
       

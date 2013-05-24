@@ -4,8 +4,8 @@ require 'omniauth-shapeways'
 require 'reshape'
 
 # Get these keys from http://developer.shapeways.com
-ENV['CONSUMER_KEY'] = ''
-ENV['CONSUMER_SECRET'] = ''
+ENV['SHAPEWAYS_CONSUMER_KEY'] = ''
+ENV['SHAPEWAYS_CONSUMER_SECRET'] = ''
 
 # To run this example:
 # $ bundle install
@@ -18,12 +18,19 @@ class App < Sinatra::Base
 
   get '/auth/:provider/callback' do
     auth = request.env['omniauth.auth']
+    
+    puts '::::'
+    puts auth.credentials.token
+    puts auth.credentials.secret
+    
     client = Reshape::Client.new({
-      consumer_token: ENV['SHAPEWAYS_CONSUMER_TOKEN'], 
+      consumer_token: ENV['SHAPEWAYS_CONSUMER_KEY'], 
       consumer_secret: ENV['SHAPEWAYS_CONSUMER_SECRET'], 
       oauth_token: auth.credentials.token, 
-      oauth_secret: auth.credentials.secret
+      oauth_secret: auth.credentials.secret, 
+      proxy: 'http://localhost:8888'
     })
+    
     materials = client.materials
     
     erb "<h1>#{params[:provider]}</h1>
@@ -39,7 +46,7 @@ end
 use Rack::Session::Cookie
 
 use OmniAuth::Builder do
-  provider :shapeways, ENV['CONSUMER_KEY'], ENV['CONSUMER_SECRET']
+  provider :shapeways, ENV['SHAPEWAYS_CONSUMER_KEY'], ENV['SHAPEWAYS_CONSUMER_SECRET']
 end
 
 run App.new

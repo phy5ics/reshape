@@ -6,8 +6,8 @@ module Reshape
         get("/materials/#{api_version}", options, raw)
       end
       
-      def material(materialId, options={}, raw=false)
-        get("/materials/#{materialId}/#{api_version}", options, raw)
+      def material(id, options={}, raw=false)
+        get("/materials/#{id}/#{api_version}", options, raw)
       end
       
     end

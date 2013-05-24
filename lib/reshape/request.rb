@@ -7,8 +7,6 @@ module Reshape
     end
     
     def post(path, options={}, raw=false, force_urlencoded=false)
-      puts 'OPTIONZZZZ: '
-      puts options
       request(:post, path, options, raw, force_urlencoded)
     end
 
@@ -24,7 +22,6 @@ module Reshape
 
     def request(method, path, options, raw, force_urlencoded)
       response = connection(raw, force_urlencoded).send(method) do |request|
-        # request.params = options[:body] if options[:body]
         case method
         when :delete, :get
           request.url(path, options)

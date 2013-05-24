@@ -7,6 +7,8 @@ module Reshape
     end
     
     def post(path, options={}, raw=false, force_urlencoded=false)
+      puts 'OPTIONZZZZ: '
+      puts options
       request(:post, path, options, raw, force_urlencoded)
     end
 
@@ -22,11 +24,14 @@ module Reshape
 
     def request(method, path, options, raw, force_urlencoded)
       response = connection(raw, force_urlencoded).send(method) do |request|
-        # path = "#{path}.#{response_format}"
-        # options.merge!('api-key' => api_key)
-        puts "path: #{path}"
-        # puts "options: #{options}"
-        request.url(path, options)
+        # request.params = options[:body] if options[:body]
+        case method
+        when :delete, :get
+          request.url(path, options)
+        when :patch, :post, :put
+          request.path = path
+          request.body = options unless options.empty?
+        end
       end
 
       if raw

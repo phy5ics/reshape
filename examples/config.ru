@@ -4,8 +4,8 @@ require 'omniauth-shapeways'
 require 'reshape'
 
 # Get these keys from http://developer.shapeways.com
-ENV['CONSUMER_KEY'] = '61b13483fc0caf31f986026ce2add918d3fa9377'
-ENV['CONSUMER_SECRET'] = 'd0482b1653e67cfd25057c257eedd48a5cb8b66e'
+ENV['CONSUMER_KEY'] = ''
+ENV['CONSUMER_SECRET'] = ''
 
 # To run this example:
 # $ bundle install

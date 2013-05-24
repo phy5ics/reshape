@@ -60,3 +60,12 @@ end
 def shapeways_url(url)
   "http://api.shapeways.com/#{url}/#{@client.api_version}"
 end
+
+def shapeways_client
+  Reshape::Client.new({
+    consumer_token: ENV['SHAPEWAYS_CONSUMER_TOKEN'], 
+    consumer_secret: ENV['SHAPEWAYS_CONSUMER_SECRET'], 
+    oauth_token: ENV['SHAPEWAYS_OAUTH_TOKEN'], 
+    oauth_secret: ENV['SHAPEWAYS_OAUTH_SECRET']
+  })
+end

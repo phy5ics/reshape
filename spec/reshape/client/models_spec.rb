@@ -2,17 +2,11 @@ require 'spec_helper'
 
 describe Reshape::Client::Models do
   let(:client) do
-    Reshape::Client.new({
-      consumer_token: ENV['SHAPEWAYS_CONSUMER_TOKEN'], 
-      consumer_secret: ENV['SHAPEWAYS_CONSUMER_SECRET'], 
-      oauth_token: ENV['SHAPEWAYS_OAUTH_TOKEN'], 
-      oauth_secret: ENV['SHAPEWAYS_OAUTH_SECRET'], 
-      proxy: 'http://localhost:8888'
-    })
+    shapeways_client
   end
   
   after(:each) do
-    Reshape.reset
+    shapeways_client.reset
   end
 
   it "should list models in json" do

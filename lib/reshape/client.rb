@@ -7,6 +7,7 @@ require 'reshape/client/materials'
 require 'reshape/client/models'
 require 'reshape/client/printers'
 require 'reshape/client/price'
+require 'reshape/client/categories'
 
 module Reshape
   class Client
@@ -27,6 +28,7 @@ module Reshape
     include Reshape::Client::Models
     include Reshape::Client::Printers
     include Reshape::Client::Price
+    include Reshape::Client::Categories
     
   end
 end

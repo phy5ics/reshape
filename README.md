@@ -45,6 +45,12 @@ get '/auth/:provider/callback' do
 end
 ```
 
+Check the examples directory for a full example using Sinatra.
+
+## Todo
+
+Add rspec tests for adding models and photos.
+
 
 ## <a name="build"></a>Build Status
 [![Build Status](https://secure.travis-ci.org/phy5ics/reshape.png?branch=master)][travis]

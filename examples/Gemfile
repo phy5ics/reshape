@@ -1,0 +1,6 @@
+source 'https://rubygems.org'
+
+gem 'sinatra'
+gem 'multi_json'
+gem 'omniauth-shapeways'
+gem 'reshape'

@@ -1,0 +1,65 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://api.shapeways.com/orders/cart/v1
+    body:
+      encoding: UTF-8
+      string: '{"modelId":212594,"materialId":77,"quantity":1}'
+    headers:
+      User-Agent:
+      - Faraday v0.8.7
+      Content-Type:
+      - application/json
+      Authorization:
+      - OAuth oauth_consumer_key="61b13483fc0caf31f986026ce2add918d3fa9377", oauth_nonce="236b07d621d63f4dd61fb8a734b35117",
+        oauth_signature="XZ2NJQTC0gGvawsapATVaToJswI%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1369407033", oauth_token="a7b557d69456b2efdd93fc64db999d0c8cae1d57",
+        oauth_version="1.0"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.0.5
+      Date:
+      - Fri, 24 May 2013 14:50:33 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Powered-By:
+      - PHP/5.3.6-13ubuntu3.7
+      X-Ratelimit-Oktogo-Inseconds:
+      - '0'
+      X-Ratelimit-Window-Inminutes:
+      - '5'
+      X-Ratelimit-Retry-Inseconds:
+      - '0'
+      X-Ratelimit-Window-Inseconds:
+      - '300'
+      X-Ratelimit-Limit:
+      - '150'
+      X-Ratelimit-Remaining:
+      - '148'
+      Cache-Control:
+      - no-cache, must-revalidate
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      Vary:
+      - Accept-Encoding
+      Set-Cookie:
+      - whid=3; path=/
+      Transfer-Encoding:
+      - chunked
+      Proxy-Connection:
+      - Keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"result":"success","nextActionSuggestions":{"getCartList":{"method":"GET","restUrl":"http:\/\/api.shapeways.com\/orders\/cart\/v1","link":"\/orders\/cart\/v1"}}}'
+    http_version: 
+  recorded_at: Fri, 24 May 2013 14:50:33 GMT
+recorded_with: VCR 2.5.0

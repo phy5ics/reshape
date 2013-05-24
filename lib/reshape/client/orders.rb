@@ -2,7 +2,7 @@ module Reshape
   class Client
     module Orders
       
-      def list_cart(options={}, raw=false)
+      def cart(options={}, raw=false)
         get("/orders/cart/#{api_version}", options, raw)
       end
       

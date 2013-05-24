@@ -32,7 +32,7 @@ describe Faraday::Response do
 
       it "should raise #{exception.name} error" do
         lambda do
-          @client.list_cart
+          @client.cart
         end.should raise_error(exception)
       end
     end

@@ -8,6 +8,7 @@ module Reshape
       :api_version,
       :api_endpoint,
       :web_endpoint,
+      :proxy,
       :consumer_token,
       :consumer_secret,
       :consumer_options,
@@ -50,6 +51,7 @@ module Reshape
       self.api_version = DEFAULT_API_VERSION
       self.api_endpoint = DEFAULT_API_ENDPOINT
       self.web_endpoint = DEFAULT_WEB_ENDPOINT
+      self.proxy = nil
       self.consumer_token = nil
       self.consumer_secret = nil
       self.oauth_token = nil

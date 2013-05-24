@@ -14,17 +14,17 @@ module Reshape
     end
     
     def connection(raw=false, force_urlencoded=false)
-      # url = "#{Reshape.api_endpoint}#{Reshape.api_version}"
       url = "#{Reshape.api_endpoint}"
 
       options = {
         url: url,
-        proxy: 'http://localhost:8888'
+        proxy: proxy,
+        ssl: { verify: false },
       }
       
       connection = Faraday.new(options) do |builder|
         builder.use Faraday::Response::RaiseReshapeApiError
-        builder.request :url_encoded
+        builder.request :json
         builder.request :oauth, oauth_data
         unless raw
           builder.use FaradayMiddleware::Mashify

@@ -19,8 +19,6 @@ module Faraday
         raise Reshape::UnprocessableEntity, error_message(response)
       when 500
         raise Reshape::InternalServerError, error_message(response)
-      when 501
-        raise Reshape::NotImplemented, error_message(response)
       when 502
         raise Reshape::BadGateway, error_message(response)
       when 503

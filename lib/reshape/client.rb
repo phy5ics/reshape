@@ -4,6 +4,7 @@ require 'reshape/request'
 require 'reshape/error'
 require 'reshape/client/orders'
 require 'reshape/client/materials'
+require 'reshape/client/models'
 
 module Reshape
   class Client
@@ -21,6 +22,7 @@ module Reshape
     include Reshape::Request
     include Reshape::Client::Orders
     include Reshape::Client::Materials
+    include Reshape::Client::Models
     
   end
 end

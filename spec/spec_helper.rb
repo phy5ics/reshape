@@ -25,12 +25,28 @@ def a_post(url)
   a_request(:post, shapeways_url(url))
 end
 
+def a_put(url)
+  a_request(:put, shapeways_url(url))
+end
+
+def a_delete(url)
+  a_request(:delete, shapeways_url(url))
+end
+
 def stub_get(url)
   stub_request(:get, shapeways_url(url))
 end
 
 def stub_post(url)
   stub_request(:post, shapeways_url(url))
+end
+
+def stub_put(url)
+  stub_request(:put, shapeways_url(url))
+end
+
+def stub_delete(url)
+  stub_request(:delete, shapeways_url(url))
 end
 
 def fixture_path

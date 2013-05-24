@@ -10,18 +10,11 @@ require 'rspec'
 require 'webmock/rspec'
 require 'vcr'
 
-WebMock.allow_net_connect!
-
 VCR.configure do |c|
   c.cassette_library_dir = 'spec/fixtures/cassettes'
   c.hook_into :webmock
   c.ignore_localhost = true
   c.allow_http_connections_when_no_cassette = true
-  # c.default_cassette_options = { :record => :none }
-end
-
-RSpec.configure do |c|
-  c.extend VCR::RSpec::Macros
 end
 
 def a_get(url)

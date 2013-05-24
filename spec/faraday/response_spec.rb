@@ -3,7 +3,13 @@ require 'spec_helper'
 
 describe Faraday::Response do
   before do
-    @client = Reshape::Client.new({consumer_token: ENV['SHAPEWAYS_CONSUMER_TOKEN'], consumer_secret: ENV['SHAPEWAYS_CONSUMER_SECRET']})
+    @client = Reshape::Client.new({
+      consumer_token: ENV['SHAPEWAYS_CONSUMER_TOKEN'], 
+      consumer_secret: ENV['SHAPEWAYS_CONSUMER_SECRET'], 
+      oauth_token: ENV['SHAPEWAYS_OAUTH_TOKEN'], 
+      oauth_secret: ENV['SHAPEWAYS_OAUTH_SECRET'], 
+      proxy: 'http://localhost:8888'
+    })
   end
 
   {
@@ -26,7 +32,7 @@ describe Faraday::Response do
 
       it "should raise #{exception.name} error" do
         lambda do
-          @client.get_cart
+          @client.list_cart
         end.should raise_error(exception)
       end
     end

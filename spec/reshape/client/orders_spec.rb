@@ -16,13 +16,13 @@ describe Reshape::Client::Orders do
   end
 
   it "should list cart orders in json" do
-    response = client.get_cart
+    response = client.list_cart
     response.should be_an_instance_of(Hashie::Mash)
     response.result.should == 'success'
   end 
   
   it "should add an order to the cart in json" do
-    response = client.post_cart(212594, 77, 1)
+    response = client.add_to_cart(212594, 77, 1)
     response.should be_an_instance_of(Hashie::Mash)
     response.result.should == 'success'
   end

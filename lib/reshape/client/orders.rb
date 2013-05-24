@@ -2,11 +2,11 @@ module Reshape
   class Client
     module Orders
       
-      def get_cart(options={}, raw=false)
+      def list_cart(options={}, raw=false)
         get("/orders/cart/#{api_version}", options, raw)
       end
       
-      def post_cart(modelId, materialId, quantity, options={}, raw=false)
+      def add_to_cart(modelId, materialId, quantity, options={}, raw=false)
         options.merge!(
           {
             modelId: modelId,

@@ -23,9 +23,6 @@ module Reshape
   # Raised when Shapeways returns a 500 HTTP status code
   class InternalServerError < Error; end
 
-  # Raised when Shapeways returns a 501 HTTP status code
-  class NotImplemenShapeways < Error; end
-
   # Raised when Shapeways returns a 502 HTTP status code
   class BadGateway < Error; end
 

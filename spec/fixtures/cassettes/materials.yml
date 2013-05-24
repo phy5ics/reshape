@@ -1,0 +1,91 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.shapeways.com/materials/v1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.7
+      Authorization:
+      - OAuth oauth_consumer_key="dummy-key", oauth_nonce="4841e2d9e377557b01bd9a4b0a4f8115",
+        oauth_signature="zVQiDxrp0k77MNWY37U69cgWlVc%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1369407662", oauth_token="dummy-token",
+        oauth_version="1.0"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.0.5
+      Date:
+      - Fri, 24 May 2013 15:01:02 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Powered-By:
+      - PHP/5.3.6-13ubuntu3.7
+      X-Ratelimit-Oktogo-Inseconds:
+      - '0'
+      X-Ratelimit-Window-Inminutes:
+      - '5'
+      X-Ratelimit-Retry-Inseconds:
+      - '0'
+      X-Ratelimit-Window-Inseconds:
+      - '300'
+      X-Ratelimit-Limit:
+      - '150'
+      X-Ratelimit-Remaining:
+      - '148'
+      Cache-Control:
+      - no-cache, must-revalidate
+      - private
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      Vary:
+      - Accept-Encoding
+      Set-Cookie:
+      - whid=2; path=/
+      Transfer-Encoding:
+      - chunked
+      Proxy-Connection:
+      - Keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"result":"success","materials":{"6":{"materialId":"6","title":"White
+        Strong & Flexible","supportsColorFiles":"0","printerId":"5","swatch":"http:\/\/static2.shapeways.netdna-cdn.com\/rrstatic\/img\/materials\/plastic_wsf_white.jpg"},"62":{"materialId":"62","title":"White
+        Strong & Flexible Polished","supportsColorFiles":"0","printerId":"20","swatch":"http:\/\/static2.shapeways.netdna-cdn.com\/rrstatic\/img\/materials\/wsfp_thumb.jpg"},"25":{"materialId":"25","title":"Black
+        Strong & Flexible","supportsColorFiles":"0","printerId":"8","swatch":"http:\/\/static2.shapeways.netdna-cdn.com\/rrstatic\/img\/materials\/plastic_wsf_black.jpg"},"76":{"materialId":"76","title":"Coral
+        Red Strong & Flexible Polished","supportsColorFiles":"0","printerId":"20","swatch":"http:\/\/static2.shapeways.netdna-cdn.com\/rrstatic\/img\/materials\/swatch-coral-red.jpg"},"77":{"materialId":"77","title":"Hot
+        Pink Strong & Flexible Polished","supportsColorFiles":"0","printerId":"20","swatch":"http:\/\/static2.shapeways.netdna-cdn.com\/rrstatic\/img\/materials\/swatch-hot-pink.jpg"},"78":{"materialId":"78","title":"Royal
+        Blue Strong & Flexible Polished","supportsColorFiles":"0","printerId":"20","swatch":"http:\/\/static2.shapeways.netdna-cdn.com\/rrstatic\/img\/materials\/swatch-royal-blue.jpg"},"75":{"materialId":"75","title":"Violet
+        Purple Strong & Flexible Polished","supportsColorFiles":"0","printerId":"20","swatch":"http:\/\/static2.shapeways.netdna-cdn.com\/rrstatic\/img\/materials\/swatch-violet-purple.jpg"},"61":{"materialId":"61","title":"Frosted
+        Ultra Detail","supportsColorFiles":"0","printerId":"19","swatch":"http:\/\/static2.shapeways.netdna-cdn.com\/rrstatic\/img\/materials\/fud_thumb.jpg"},"60":{"materialId":"60","title":"Frosted
+        Detail","supportsColorFiles":"0","printerId":"18","swatch":"http:\/\/static2.shapeways.netdna-cdn.com\/rrstatic\/img\/materials\/fd_thumb.jpg"},"5":{"materialId":"5","title":"White
+        Detail","supportsColorFiles":"0","printerId":"4","swatch":"http:\/\/static2.shapeways.netdna-cdn.com\/rrstatic\/img\/materials\/plastic_detail_white.jpg"},"7":{"materialId":"7","title":"Black
+        Detail","supportsColorFiles":"0","printerId":"4","swatch":"http:\/\/static2.shapeways.netdna-cdn.com\/rrstatic\/img\/materials\/plastic_detail_black.jpg"},"4":{"materialId":"4","title":"Transparent
+        Detail","supportsColorFiles":"0","printerId":"4","swatch":"http:\/\/static2.shapeways.netdna-cdn.com\/rrstatic\/img\/materials\/plastic_detail_transparent.jpg"},"26":{"materialId":"26","title":"Full
+        Color Sandstone","supportsColorFiles":"1","printerId":"11","swatch":"http:\/\/static2.shapeways.netdna-cdn.com\/rrstatic\/img\/materials\/sandstone_full_color.jpg"},"27":{"materialId":"27","title":"Sandstone","supportsColorFiles":"0","printerId":"11","swatch":"http:\/\/static2.shapeways.netdna-cdn.com\/rrstatic\/img\/materials\/sandstone_no_color.jpg"},"70":{"materialId":"70","title":"Satin
+        Black Ceramics","supportsColorFiles":"0","printerId":"21","swatch":"http:\/\/static2.shapeways.netdna-cdn.com\/rrstatic\/img\/materials\/th_sbc.jpg"},"64":{"materialId":"64","title":"Gloss
+        Black Ceramics","supportsColorFiles":"0","printerId":"21","swatch":"http:\/\/static2.shapeways.netdna-cdn.com\/rrstatic\/img\/materials\/blackceramics_thumbnail.jpg"},"63":{"materialId":"63","title":"Glazed
+        Ceramics","supportsColorFiles":"0","printerId":"21","swatch":"http:\/\/static2.shapeways.netdna-cdn.com\/rrstatic\/img\/materials\/ceramics-thumb.jpg"},"74":{"materialId":"74","title":"Pastel
+        Yellow Ceramics","supportsColorFiles":"0","printerId":"21","swatch":"http:\/\/static2.shapeways.netdna-cdn.com\/rrstatic\/img\/materials\/th_pyc.jpg"},"73":{"materialId":"73","title":"Avocado
+        Green Ceramics","supportsColorFiles":"0","printerId":"21","swatch":"http:\/\/static2.shapeways.netdna-cdn.com\/rrstatic\/img\/materials\/th_agc.jpg"},"72":{"materialId":"72","title":"Eggshell
+        Blue Ceramics","supportsColorFiles":"0","printerId":"21","swatch":"http:\/\/static2.shapeways.netdna-cdn.com\/rrstatic\/img\/materials\/th_ebc.jpg"},"81":{"materialId":"81","title":"Premium
+        Silver","supportsColorFiles":"0","printerId":"25","swatch":"http:\/\/static2.shapeways.netdna-cdn.com\/rrstatic\/img\/materials\/swatch-premium-silver-2013030403.png"},"54":{"materialId":"54","title":"Silver
+        Glossy","supportsColorFiles":"0","printerId":"9","swatch":"http:\/\/static2.shapeways.netdna-cdn.com\/rrstatic\/img\/materials\/silver_glossy.jpg"},"53":{"materialId":"53","title":"Silver","supportsColorFiles":"0","printerId":"9","swatch":"http:\/\/static2.shapeways.netdna-cdn.com\/rrstatic\/img\/materials\/silver.jpg"},"23":{"materialId":"23","title":"Stainless
+        Steel","supportsColorFiles":"0","printerId":"6","swatch":"http:\/\/static2.shapeways.netdna-cdn.com\/rrstatic\/img\/materials\/metal_stainless_steel.jpg"},"31":{"materialId":"31","title":"Gold
+        Plated Matte","supportsColorFiles":"0","printerId":"14","swatch":"http:\/\/static2.shapeways.netdna-cdn.com\/rrstatic\/img\/materials\/metal_gold_matt.jpg"},"39":{"materialId":"39","title":"Gold
+        Plated Glossy","supportsColorFiles":"0","printerId":"6","swatch":"http:\/\/static2.shapeways.netdna-cdn.com\/rrstatic\/img\/materials\/metal_gold_shiny.jpg"},"37":{"materialId":"37","title":"Antique
+        Bronze Matte","supportsColorFiles":"0","printerId":"6","swatch":"http:\/\/static2.shapeways.netdna-cdn.com\/rrstatic\/img\/materials\/metal_bronze_matte.jpg"},"38":{"materialId":"38","title":"Antique
+        Bronze Glossy","supportsColorFiles":"0","printerId":"6","swatch":"http:\/\/static2.shapeways.netdna-cdn.com\/rrstatic\/img\/materials\/metal_bronze_shiny.jpg"},"28":{"materialId":"28","title":"Alumide","supportsColorFiles":"0","printerId":"12","swatch":"http:\/\/static2.shapeways.netdna-cdn.com\/rrstatic\/img\/materials\/plastic_alumide.jpg"},"66":{"materialId":"66","title":"Polished
+        Alumide","supportsColorFiles":"0","printerId":"22","swatch":"http:\/\/static2.shapeways.netdna-cdn.com\/rrstatic\/img\/materials\/polished_plastic_alumide.jpg"}},"nextActionSuggestions":[]}'
+    http_version: 
+  recorded_at: Fri, 24 May 2013 15:01:02 GMT
+recorded_with: VCR 2.5.0

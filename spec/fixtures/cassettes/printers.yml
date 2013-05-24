@@ -1,0 +1,85 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.shapeways.com/printers/v1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.7
+      Authorization:
+      - OAuth oauth_consumer_key="dummy-key", oauth_nonce="b98ccb2c55ef7b36450014a174c46c13",
+        oauth_signature="fpKmcbKmYr3cIpKkwfjrHmAZkHc%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1369413988", oauth_token="dummy-token",
+        oauth_version="1.0"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.0.5
+      Date:
+      - Fri, 24 May 2013 16:46:28 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Powered-By:
+      - PHP/5.3.6-13ubuntu3.7
+      X-Ratelimit-Oktogo-Inseconds:
+      - '0'
+      X-Ratelimit-Window-Inminutes:
+      - '5'
+      X-Ratelimit-Retry-Inseconds:
+      - '0'
+      X-Ratelimit-Window-Inseconds:
+      - '300'
+      X-Ratelimit-Limit:
+      - '150'
+      X-Ratelimit-Remaining:
+      - '149'
+      Cache-Control:
+      - no-cache, must-revalidate
+      - private
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      Vary:
+      - Accept-Encoding
+      Set-Cookie:
+      - whid=3; path=/
+      Transfer-Encoding:
+      - chunked
+      Proxy-Connection:
+      - Keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"result":"success","printers":[{"printerId":"1","title":"Somatech
+        FDM","xBoundMin":"0.2500","xBoundMax":"25.0000","yBoundMin":"0.2500","yBoundMax":"25.0000","zBoundMin":"0.1000","zBoundMax":"30.0000"},{"printerId":"4","title":"Somatech
+        Objet 720","xBoundMin":"0.2390","xBoundMax":"25.0000","yBoundMin":"0.2390","yBoundMax":"25.0000","zBoundMin":"0.1000","zBoundMax":"20.0000"},{"printerId":"5","title":"SLS
+        Printer","xBoundMin":"0.0700","xBoundMax":"66.0000","yBoundMin":"0.0700","yBoundMax":"35.0000","zBoundMin":"0.0700","zBoundMax":"55.0000"},{"printerId":"6","title":"Metal
+        Printer matt","xBoundMin":"0.2500","xBoundMax":"100.0000","yBoundMin":"0.2500","yBoundMax":"45.0000","zBoundMin":"0.3000","zBoundMax":"25.0000"},{"printerId":"8","title":"SLS
+        Color Printer","xBoundMin":"0.0700","xBoundMax":"18.0000","yBoundMin":"0.0700","yBoundMax":"23.0000","zBoundMin":"0.0700","zBoundMax":"32.0000"},{"printerId":"9","title":"Silver
+        Printer","xBoundMin":"0.2390","xBoundMax":"15.0000","yBoundMin":"0.2390","yBoundMax":"15.0000","zBoundMin":"0.0600","zBoundMax":"3.0000"},{"printerId":"10","title":"White
+        Glaze FDM","xBoundMin":"0.2500","xBoundMax":"0.2500","yBoundMin":"0.2500","yBoundMax":"0.2500","zBoundMin":"0.2500","zBoundMax":"0.2500"},{"printerId":"11","title":"ZPrinter
+        650","xBoundMin":"0.2500","xBoundMax":"25.4000","yBoundMin":"0.2500","yBoundMax":"38.1000","zBoundMin":"0.3000","zBoundMax":"20.3000"},{"printerId":"12","title":"SLS
+        Alumide","xBoundMin":"0.0800","xBoundMax":"18.4110","yBoundMin":"0.0800","yBoundMax":"23.2560","zBoundMin":"0.0800","zBoundMax":"31.7000"},{"printerId":"13","title":"Glass
+        Printer","xBoundMin":"0.2499","xBoundMax":"7.5000","yBoundMin":"0.2499","yBoundMax":"7.5000","zBoundMin":"0.3000","zBoundMax":"7.5000"},{"printerId":"14","title":"Metal
+        printer Gold","xBoundMin":"0.2490","xBoundMax":"100.0000","yBoundMin":"0.2490","yBoundMax":"45.0000","zBoundMin":"0.3000","zBoundMax":"25.0000"},{"printerId":"15","title":"SLS
+        Color Printer New","xBoundMin":"0.0700","xBoundMax":"18.0000","yBoundMin":"0.0700","yBoundMax":"23.0000","zBoundMin":"0.0700","zBoundMax":"32.0000"},{"printerId":"16","title":"Shapeways
+        products","xBoundMin":"0.2500","xBoundMax":"35.0000","yBoundMin":"0.2500","yBoundMax":"35.0000","zBoundMin":"0.2500","zBoundMax":"35.0000"},{"printerId":"18","title":"HD
+        printer","xBoundMin":"0.2490","xBoundMax":"29.8000","yBoundMin":"0.2490","yBoundMax":"18.5000","zBoundMin":"0.0500","zBoundMax":"20.3000"},{"printerId":"19","title":"UHD
+        printer","xBoundMin":"0.2490","xBoundMax":"12.7000","yBoundMin":"0.2490","yBoundMax":"17.8000","zBoundMin":"0.0300","zBoundMax":"15.8000"},{"printerId":"20","title":"SLS
+        Printer polished","xBoundMin":"0.2490","xBoundMax":"15.0000","yBoundMin":"0.2490","yBoundMax":"15.0000","zBoundMin":"0.1000","zBoundMax":"15.0000"},{"printerId":"21","title":"Ceramics
+        printer","xBoundMin":"0.2490","xBoundMax":"34.0000","yBoundMin":"0.2490","yBoundMax":"24.0000","zBoundMin":"0.2490","zBoundMax":"17.0000"},{"printerId":"22","title":"SLS
+        Polished Alumide","xBoundMin":"0.1000","xBoundMax":"15.0000","yBoundMin":"0.1000","yBoundMax":"15.0000","zBoundMin":"0.1000","zBoundMax":"15.0000"},{"printerId":"23","title":"Sinterstation
+        Flex","xBoundMin":"0.7000","xBoundMax":"26.0000","yBoundMin":"0.7000","yBoundMax":"21.0000","zBoundMin":"0.1500","zBoundMax":"17.0000"},{"printerId":"24","title":"High
+        Definition Stainless Steel","xBoundMin":"0.3000","xBoundMax":"4.0000","yBoundMin":"0.3000","yBoundMax":"4.0000","zBoundMin":"0.3000","zBoundMax":"3.5000"},{"printerId":"25","title":"Super
+        Silver Printer","xBoundMin":"0.2400","xBoundMax":"10.0000","yBoundMin":"0.2400","yBoundMax":"10.0000","zBoundMin":"0.0600","zBoundMax":"3.0000"}],"nextActionSuggestions":[]}'
+    http_version: 
+  recorded_at: Fri, 24 May 2013 16:46:28 GMT
+recorded_with: VCR 2.5.0

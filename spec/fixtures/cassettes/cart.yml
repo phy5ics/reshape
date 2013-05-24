@@ -1,20 +1,18 @@
 ---
 http_interactions:
 - request:
-    method: post
+    method: get
     uri: http://api.shapeways.com/orders/cart/v1
     body:
-      encoding: UTF-8
-      string: '{"modelId":212594,"materialId":77,"quantity":1}'
+      encoding: US-ASCII
+      string: ''
     headers:
       User-Agent:
       - Faraday v0.8.7
-      Content-Type:
-      - application/json
       Authorization:
-      - OAuth oauth_consumer_key="dummy-key", oauth_nonce="4d27b3f07e1168dc257fd29f1ff629f1",
-        oauth_signature="O83r4pHaP%2B%2FvGWp3Wb0jLqqDdOs%3D", oauth_signature_method="HMAC-SHA1",
-        oauth_timestamp="1369408148", oauth_token="dummy-token",
+      - OAuth oauth_consumer_key="dummy-key", oauth_nonce="635bf901c644e2e5515b41e35e340702",
+        oauth_signature="9BNNE5VNE35zNuU7rOZzndKn%2FFI%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1369408147", oauth_token="dummy-token",
         oauth_version="1.0"
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
@@ -47,19 +45,20 @@ http_interactions:
       - '149'
       Cache-Control:
       - no-cache, must-revalidate
+      - private
       Expires:
       - Mon, 26 Jul 1997 05:00:00 GMT
       Vary:
       - Accept-Encoding
       Set-Cookie:
-      - whid=2; path=/
+      - whid=1; path=/
       Transfer-Encoding:
       - chunked
       Proxy-Connection:
       - Keep-alive
     body:
       encoding: UTF-8
-      string: '{"result":"success","nextActionSuggestions":{"getCartList":{"method":"GET","restUrl":"http:\/\/api.shapeways.com\/orders\/cart\/v1","link":"\/orders\/cart\/v1"}}}'
+      string: '{"result":"success","itemCount":8,"items":[{"cartKey":"212594-77","modelId":"212594","materialId":"77","quantity":"8"}],"nextActionSuggestions":[]}'
     http_version: 
   recorded_at: Fri, 24 May 2013 15:09:08 GMT
 recorded_with: VCR 2.5.0

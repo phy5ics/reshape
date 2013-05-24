@@ -1,0 +1,65 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://api.shapeways.com/price/v1
+    body:
+      encoding: UTF-8
+      string: '{"volume":1.0e-06,"area":0.0006,"xBoundMin":0,"xBoundMax":0.01,"yBoundMin":0,"yBoundMax":0.01,"zBoundMin":0,"zBoundMax":0.01}'
+    headers:
+      User-Agent:
+      - Faraday v0.8.7
+      Content-Type:
+      - application/json
+      Authorization:
+      - OAuth oauth_consumer_key="dummy-key", oauth_nonce="3cf3f2d066b7baf86f302c3e647386b0",
+        oauth_signature="QdQgFDzn39QYLPrNzffabEDyXes%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1369415096", oauth_token="dummy-token",
+        oauth_version="1.0"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.0.5
+      Date:
+      - Fri, 24 May 2013 17:04:56 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - PHP/5.3.6-13ubuntu3.7
+      X-Ratelimit-Oktogo-Inseconds:
+      - '0'
+      X-Ratelimit-Window-Inminutes:
+      - '5'
+      X-Ratelimit-Retry-Inseconds:
+      - '0'
+      X-Ratelimit-Window-Inseconds:
+      - '300'
+      X-Ratelimit-Limit:
+      - '150'
+      X-Ratelimit-Remaining:
+      - '149'
+      Cache-Control:
+      - no-cache, must-revalidate
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      Vary:
+      - Accept-Encoding
+      Set-Cookie:
+      - whid=1; path=/
+    body:
+      encoding: UTF-8
+      string: '{"result":"success","prices":{"6":{"materialId":"6","price":2.9,"currency":"USD"},"62":{"materialId":"62","price":3.5,"currency":"USD"},"25":{"materialId":"25","price":3.5,"currency":"USD"},"76":{"materialId":"76","price":3.75,"currency":"USD"},"77":{"materialId":"77","price":3.75,"currency":"USD"},"78":{"materialId":"78","price":3.75,"currency":"USD"},"75":{"materialId":"75","price":3.75,"currency":"USD"},"61":{"materialId":"61","price":8.49,"currency":"USD"},"60":{"materialId":"60","price":7.39,"currency":"USD"},"5":{"materialId":"5","price":5.49,"currency":"USD"},"7":{"materialId":"7","price":5.49,"currency":"USD"},"4":{"materialId":"4","price":5.49,"currency":"USD"},"26":{"materialId":"26","price":3.75,"currency":"USD"},"27":{"materialId":"27","price":3.75,"currency":"USD"},"70":{"materialId":"70","price":1.08,"currency":"USD"},"64":{"materialId":"64","price":1.08,"currency":"USD"},"63":{"materialId":"63","price":1.08,"currency":"USD"},"74":{"materialId":"74","price":1.08,"currency":"USD"},"73":{"materialId":"73","price":1.08,"currency":"USD"},"72":{"materialId":"72","price":1.08,"currency":"USD"},"81":{"materialId":"81","price":73,"currency":"USD"},"54":{"materialId":"54","price":55,"currency":"USD"},"53":{"materialId":"53","price":50,"currency":"USD"},"23":{"materialId":"23","price":14,"currency":"USD"},"31":{"materialId":"31","price":17,"currency":"USD"},"39":{"materialId":"39","price":17,"currency":"USD"},"37":{"materialId":"37","price":15.5,"currency":"USD"},"38":{"materialId":"38","price":15.5,"currency":"USD"},"28":{"materialId":"28","price":3.25,"currency":"USD"},"66":{"materialId":"66","price":3.5,"currency":"USD"}},"nextActionSuggestions":{"uploadModel":{"method":"POST","restUrl":"http:\/\/api.shapeways.com\/models\/v1","link":"\/models\/v1"}}}'
+    http_version: 
+  recorded_at: Fri, 24 May 2013 17:04:57 GMT
+recorded_with: VCR 2.5.0

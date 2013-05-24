@@ -1,0 +1,71 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.shapeways.com/categories/v1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.7
+      Authorization:
+      - OAuth oauth_consumer_key="dummy-key", oauth_nonce="96b0482e389d8c25b3bbc2ca3d331074",
+        oauth_signature="tvAHCson%2BWD1PDuwISXpEqX1lf8%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1369415623", oauth_token="dummy-token",
+        oauth_version="1.0"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.0.5
+      Date:
+      - Fri, 24 May 2013 17:13:43 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Powered-By:
+      - PHP/5.3.6-13ubuntu3.7
+      X-Ratelimit-Oktogo-Inseconds:
+      - '0'
+      X-Ratelimit-Window-Inminutes:
+      - '5'
+      X-Ratelimit-Retry-Inseconds:
+      - '0'
+      X-Ratelimit-Window-Inseconds:
+      - '300'
+      X-Ratelimit-Limit:
+      - '150'
+      X-Ratelimit-Remaining:
+      - '148'
+      Cache-Control:
+      - no-cache, must-revalidate
+      - private
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      Vary:
+      - Accept-Encoding
+      Set-Cookie:
+      - whid=3; path=/
+      Transfer-Encoding:
+      - chunked
+      Proxy-Connection:
+      - Keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"result":"success","categories":{"16":{"categoryId":"16","title":"Art","level":"1","parentId":null},"17":{"categoryId":"17","title":"Figurines","level":"2","parentId":"38"},"18":{"categoryId":"18","title":"Accessories","level":"2","parentId":"55"},"21":{"categoryId":"21","title":"Mechanical
+        parts","level":"2","parentId":"104"},"23":{"categoryId":"23","title":"Jewelry","level":"1","parentId":null},"25":{"categoryId":"25","title":"Accessories","level":"2","parentId":"40"},"27":{"categoryId":"27","title":"Sculptures","level":"2","parentId":"16"},"28":{"categoryId":"28","title":"Model
+        trains","level":"2","parentId":"38"},"29":{"categoryId":"29","title":"Puzzles","level":"2","parentId":"49"},"30":{"categoryId":"30","title":"Robotics","level":"2","parentId":"40"},"33":{"categoryId":"33","title":"SciFi","level":"2","parentId":"38"},"34":{"categoryId":"34","title":"Mathematical
+        Art","level":"2","parentId":"16"},"38":{"categoryId":"38","title":"Miniatures","level":"1","parentId":null},"39":{"categoryId":"39","title":"Keychains","level":"2","parentId":"40"},"40":{"categoryId":"40","title":"Gadgets","level":"1","parentId":null},"41":{"categoryId":"41","title":"Bracelets","level":"2","parentId":"23"},"42":{"categoryId":"42","title":"Cufflinks","level":"2","parentId":"23"},"43":{"categoryId":"43","title":"Earrings","level":"2","parentId":"23"},"44":{"categoryId":"44","title":"Necklaces","level":"2","parentId":"23"},"45":{"categoryId":"45","title":"Pendants","level":"2","parentId":"23"},"46":{"categoryId":"46","title":"Rings","level":"2","parentId":"23"},"48":{"categoryId":"48","title":"Memorabilia","level":"2","parentId":"38"},"49":{"categoryId":"49","title":"Games","level":"1","parentId":null},"50":{"categoryId":"50","title":"Board
+        games","level":"2","parentId":"49"},"51":{"categoryId":"51","title":"Dice","level":"2","parentId":"49"},"55":{"categoryId":"55","title":"For
+        Your Home","level":"1","parentId":null},"75":{"categoryId":"75","title":"Lighting","level":"2","parentId":"55"},"77":{"categoryId":"77","title":"Dining","level":"2","parentId":"55"},"80":{"categoryId":"80","title":"Music","level":"2","parentId":"40"},"99":{"categoryId":"99","title":"Download","level":"1","parentId":null},"100":{"categoryId":"100","title":"Cases","level":"2","parentId":"40"},"101":{"categoryId":"101","title":"Desk
+        Toys","level":"2","parentId":"40"},"102":{"categoryId":"102","title":"Fashion","level":"1","parentId":null},"103":{"categoryId":"103","title":"Vehicles","level":"2","parentId":"38"},"104":{"categoryId":"104","title":"Maker\/DIY","level":"1","parentId":null},"105":{"categoryId":"105","title":"Toys","level":"2","parentId":"49"},"106":{"categoryId":"106","title":"Glasses","level":"2","parentId":"102"},"107":{"categoryId":"107","title":"Belts","level":"2","parentId":"102"},"108":{"categoryId":"108","title":"Bags
+        & Purses","level":"2","parentId":"102"},"109":{"categoryId":"109","title":"Wallets","level":"2","parentId":"102"},"110":{"categoryId":"110","title":"Furniture","level":"2","parentId":"55"},"127":{"categoryId":"127","title":"Memes","level":"2","parentId":"16"}},"nextActionSuggestions":[]}'
+    http_version: 
+  recorded_at: Fri, 24 May 2013 17:13:43 GMT
+recorded_with: VCR 2.5.0

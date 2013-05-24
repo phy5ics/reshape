@@ -1,0 +1,65 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.shapeways.com/models/1114694/info/v1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.7
+      Authorization:
+      - OAuth oauth_consumer_key="dummy-key", oauth_nonce="52e5dfb06818522eb5b393dde92c2cf6",
+        oauth_signature="XENRZZw%2BQYRP63%2BUA7JTOaE2cqM%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1369410909", oauth_token="dummy-token",
+        oauth_version="1.0"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.0.5
+      Date:
+      - Fri, 24 May 2013 15:55:09 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Powered-By:
+      - PHP/5.3.6-13ubuntu3.7
+      X-Ratelimit-Oktogo-Inseconds:
+      - '0'
+      X-Ratelimit-Window-Inminutes:
+      - '5'
+      X-Ratelimit-Retry-Inseconds:
+      - '0'
+      X-Ratelimit-Window-Inseconds:
+      - '300'
+      X-Ratelimit-Limit:
+      - '150'
+      X-Ratelimit-Remaining:
+      - '148'
+      Cache-Control:
+      - no-cache, must-revalidate
+      - private
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      Vary:
+      - Accept-Encoding
+      Set-Cookie:
+      - whid=2; path=/
+      Transfer-Encoding:
+      - chunked
+      Proxy-Connection:
+      - Keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"result":"success","modelId":"1114694","modelVersion":"0","title":"Usb-holder","description":"A
+        USB memory stick holder.","isPublic":0,"isForSale":0,"materials":{"6":{"materialId":"6","markup":"0.000000","isActive":1},"62":{"materialId":"62","markup":"0.000000","isActive":1},"25":{"materialId":"25","markup":"0.000000","isActive":1},"76":{"materialId":"76","markup":"0.000000","isActive":1},"77":{"materialId":"77","markup":"0.000000","isActive":1},"78":{"materialId":"78","markup":"0.000000","isActive":1},"75":{"materialId":"75","markup":"0.000000","isActive":1},"61":{"materialId":"61","markup":"0.000000","isActive":1},"60":{"materialId":"60","markup":"0.000000","isActive":1},"5":{"materialId":"5","markup":"0.000000","isActive":1},"7":{"materialId":"7","markup":"0.000000","isActive":1},"4":{"materialId":"4","markup":"0.000000","isActive":1},"27":{"materialId":"27","markup":"0.000000","isActive":1},"81":{"materialId":"81","markup":"0.000000","isActive":1},"54":{"materialId":"54","markup":"0.000000","isActive":1},"53":{"materialId":"53","markup":"0.000000","isActive":1},"23":{"materialId":"23","markup":"0.000000","isActive":1},"31":{"materialId":"31","markup":"0.000000","isActive":1},"39":{"materialId":"39","markup":"0.000000","isActive":1},"37":{"materialId":"37","markup":"0.000000","isActive":1},"38":{"materialId":"38","markup":"0.000000","isActive":1},"66":{"materialId":"66","markup":"0.000000","isActive":1},"28":{"materialId":"28","markup":"0.000000","isActive":1},"26":{"materialId":"26","markup":"0.000000","isActive":1},"72":{"materialId":"72","markup":"0.000000","isActive":1},"64":{"materialId":"64","markup":"0.000000","isActive":1},"63":{"materialId":"63","markup":"0.000000","isActive":1},"74":{"materialId":"74","markup":"0.000000","isActive":1},"73":{"materialId":"73","markup":"0.000000","isActive":1},"70":{"materialId":"70","markup":"0.000000","isActive":1}},"secretKey":"15c4e2b177ec8112c9ae613efbccc70b","defaultMaterialId":"6","categories":{"25":{"categoryId":"25","title":"Accessories","level":"2","parentId":"40"}},"nextActionSuggestions":{"addModelToShoppingCart":{"method":"POST","restUrl":"http:\/\/api.shapeways.com\/orders\/cart\/v1","link":"\/orders\/cart\/v1","parameters":{"modelId":"1114694","materialId":"int","count":"int"}},"downloadModel":{"method":"GET","restUrl":"http:\/\/api.shapeways.com\/models\/1114694\/files\/0\/v1?file=1","link":"\/models\/1114694\/files\/0\/v1?file=1"},"updateModelDetails":{"method":"PUT","restUrl":"http:\/\/api.shapeways.com\/models\/1114694\/info\/v1","link":"\/models\/1114694\/info\/v1"},"updateModelFile":{"method":"POST","restUrl":"http:\/\/api.shapeways.com\/models\/1114694\/files\/v1","link":"\/models\/1114694\/files\/v1"},"deleteModel":{"method":"DELETE","restUrl":"http:\/\/api.shapeways.com\/models\/1114694\/v1","link":"\/models\/1114694\/v1"},"addModelPhoto":{"method":"POST","restUrl":"http:\/\/api.shapeways.com\/models\/1114694\/photos\/v1","link":"\/models\/1114694\/photos\/v1"}}}'
+    http_version: 
+  recorded_at: Fri, 24 May 2013 15:55:09 GMT
+recorded_with: VCR 2.5.0

@@ -47,6 +47,19 @@ end
 
 Check the examples directory for a full example using Sinatra.
 
+## Tests
+
+Note that rspec is using vcr for fixtures. If you delete files from spec/fixtures/cassettes, the tests will fail. They use dummy tokens, and will attempt to communicate with the live API with missing OAuth parameters. In order to test against the live API and generate your own cassettes, create a .env file with the following parameters:
+
+```ruby
+	SHAPEWAYS_CONSUMER_TOKEN='your consumer token from Shapeways'
+	SHAPEWAYS_CONSUMER_SECRET='your consumer secret from Shapeways'
+	SHAPEWAYS_OAUTH_TOKEN='OAuth token that are returned from a successful authentication'
+	SHAPEWAYS_OAUTH_SECRET='OAuth secret that are returned from a successful authentication'
+```
+
+From there, you can run _foreman run bundle exec rake_ to regenerate the cassettes using live data in conjunction with your credentials. Just a word of warning: don't commit those cassettes to a public repo, as they will contain valid tokens that could potentially be used to hijack a live application that uses those credentials.
+
 ## Todo
 
 Add rspec tests for adding models and photos.

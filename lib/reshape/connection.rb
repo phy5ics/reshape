@@ -29,6 +29,8 @@ module Reshape
         builder.request :oauth, oauth_data
 
         #set the connection options passed in the constructor
+        # https://github.com/lostisland/faraday/issues/417
+        # http://stackoverflow.com/questions/8098584/faraday-timeout
         self.connection_options.each{ |op,v| builder.options[op] = v }
 
         unless raw

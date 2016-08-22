@@ -12,8 +12,11 @@ require 'reshape/client/categories'
 module Reshape
   class Client
     attr_accessor(*Configuration::VALID_OPTIONS_KEYS)
+    attr_accessor :connection_options
 
-    def initialize(options={})
+    def initialize(options={},connection_options={})
+      self.connection_options = connection_options
+
       options = Reshape.options.merge(options)
       Configuration::VALID_OPTIONS_KEYS.each do |key|
         send("#{key}=", options[key])

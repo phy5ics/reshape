@@ -16,16 +16,21 @@ module Reshape
     def connection(raw=false, force_urlencoded=false)
       url = "#{Reshape.api_endpoint}"
 
+
       options = {
         url: url,
         proxy: proxy,
         ssl: { verify: false },
       }
-      
+
       connection = Faraday.new(options) do |builder|
         builder.use Faraday::Response::RaiseReshapeApiError
         builder.request :json
         builder.request :oauth, oauth_data
+
+        #set the connection options passed in the constructor
+        self.connection_options.each{ |op,v| builder.options[op] = v }
+
         unless raw
           builder.use FaradayMiddleware::Mashify
           builder.use FaradayMiddleware::ParseJson

@@ -6,7 +6,7 @@ module Reshape
     private
     def oauth_data
       {
-        token: @oauth_token,
+        oauth_token: @oauth_token,
         token_type: :bearer
       }
     end
@@ -20,10 +20,16 @@ module Reshape
         ssl: { verify: false },
       }
 
+
       connection = Faraday.new(options) do |builder|
         builder.use Faraday::Response::RaiseReshapeApiError
+
         builder.request :json
-        builder.request :oauth2, oauth_data
+        #builder.request :oauth2, oauth_data
+
+        builder.request :oauth2, @oauth_token, token_type: :bearer
+
+        builder.response :logger
 
         #set the connection options passed in the constructor
         # https://github.com/lostisland/faraday/issues/417

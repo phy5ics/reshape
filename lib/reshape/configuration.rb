@@ -15,7 +15,7 @@ module Reshape
 
     DEFAULT_ADAPTER = Faraday.default_adapter
     DEFAULT_API_VERSION = 'v1'
-    DEFAULT_API_ENDPOINT = 'http://api.shapeways.com/'
+    DEFAULT_API_ENDPOINT = 'https://api.shapeways.com/'
     DEFAULT_WEB_ENDPOINT = 'http://www.shapeways.com/'
     DEFAULT_USER_AGENT = "Reshape Rubygem #{Reshape::VERSION}".freeze
     DEFAULT_RESPONSE_FORMAT = 'json'

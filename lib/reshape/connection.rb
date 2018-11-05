@@ -26,7 +26,7 @@ module Reshape
       connection = Faraday.new(options) do |builder|
         builder.use Faraday::Response::RaiseReshapeApiError
         builder.request :json
-        builder.request :oauth, oauth_data
+        builder.request :oauth2, oauth_data
 
         #set the connection options passed in the constructor
         # https://github.com/lostisland/faraday/issues/417

@@ -6,16 +6,13 @@ module Reshape
     private
     def oauth_data
       {
-        consumer_key: @consumer_token,
-        consumer_secret: @consumer_secret,
         token: @oauth_token,
-        token_secret: @oauth_secret
+        token_type: :bearer
       }
     end
-    
+
     def connection(raw=false, force_urlencoded=false)
       url = "#{Reshape.api_endpoint}"
-
 
       options = {
         url: url,

@@ -9,11 +9,7 @@ module Reshape
       :api_endpoint,
       :web_endpoint,
       :proxy,
-      :consumer_token,
-      :consumer_secret,
-      :consumer_options,
       :oauth_token,
-      :oauth_secret,
       :response_format,
       :user_agent].freeze
 
@@ -52,10 +48,7 @@ module Reshape
       self.api_endpoint = DEFAULT_API_ENDPOINT
       self.web_endpoint = DEFAULT_WEB_ENDPOINT
       self.proxy = nil
-      self.consumer_token = nil
-      self.consumer_secret = nil
       self.oauth_token = nil
-      self.oauth_secret = nil
       self.response_format = DEFAULT_RESPONSE_FORMAT
       self.user_agent = DEFAULT_USER_AGENT
     end

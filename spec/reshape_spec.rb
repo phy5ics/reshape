@@ -8,7 +8,7 @@ describe Reshape do
 
   describe ".respond_to?" do
     it "should be true if method exists" do
-      Reshape.respond_to?(:new, true).should be_true
+      Reshape.respond_to?(:new, true).should be true
     end
   end
 

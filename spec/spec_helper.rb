@@ -9,6 +9,7 @@ require 'reshape'
 require 'rspec'
 require 'webmock/rspec'
 require 'vcr'
+require 'byebug'
 
 VCR.configure do |c|
   c.cassette_library_dir = 'spec/fixtures/cassettes'
@@ -58,7 +59,7 @@ def fixture(file)
 end
 
 def shapeways_url(url)
-  "http://api.shapeways.com/#{url}/#{@client.api_version}"
+  "https://api.shapeways.com/#{url}/#{@client.api_version}"
 end
 
 def shapeways_client

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.shapeways.com/models/1114694/info/v1
+    uri: https://api.shapeways.com/models/1114694/info/v1
     body:
       encoding: US-ASCII
       string: ''

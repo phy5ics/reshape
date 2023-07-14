@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://api.shapeways.com/price/v1
+    uri: https://api.shapeways.com/price/v1
     body:
       encoding: UTF-8
       string: '{"volume":1.0e-06,"area":0.0006,"xBoundMin":0,"xBoundMax":0.01,"yBoundMin":0,"yBoundMax":0.01,"zBoundMin":0,"zBoundMax":0.01}'

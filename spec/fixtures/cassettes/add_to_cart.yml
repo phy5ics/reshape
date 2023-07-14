@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://api.shapeways.com/orders/cart/v1
+    uri: https://api.shapeways.com/orders/cart/v1
     body:
       encoding: UTF-8
       string: '{"modelId":212594,"materialId":77,"quantity":1}'

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.shapeways.com/orders/cart/v1
+    uri: https://api.shapeways.com/orders/cart/v1
     body:
       encoding: US-ASCII
       string: ''

@@ -1,0 +1,135 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.shapeways.com/oauth2/token
+    body:
+      encoding: UTF-8
+      string: grant_type=client_credentials
+    headers:
+      User-Agent:
+      - Faraday v1.10.3
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Authorization:
+      - Basic fake_token
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 16 Oct 2023 21:46:19 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Cache-Control:
+      - no-store
+      Pragma:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - fake_cookie;
+        path=/; expires=Mon, 16-Oct-23 22:16:19 GMT; domain=.shapeways.com; HttpOnly;
+        Secure; SameSite=None
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 81737e6cbe715af7-VIE
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"access_token":"fake_token","token_type":"bearer","expires_in":3600}'
+  recorded_at: Mon, 16 Oct 2023 21:46:19 GMT
+- request:
+    method: post
+    uri: https://api.shapeways.com/orders/v1
+    body:
+      encoding: UTF-8
+      string: '{"testMode":1,"firstName":"Alex","lastName":"Hey","country":"US","state":"CA","city":"San
+        Francisco","address1":"1250 market st","address2":"#A","address3":"Rafe
+        Records","zipCode":"94110","phoneNumber":"123456789","items":[{"modelId":"12982554","materialId":"110","quantity":1}],"paymentMethod":"credit_card","shippingOption":"Cheapest","manufacturingSpeed":"Economy"}'
+    headers:
+      User-Agent:
+      - Faraday v1.10.3
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer fake_token
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 16 Oct 2023 21:46:20 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      X-Ratelimit-Oktogo-Inseconds:
+      - '0'
+      X-Ratelimit-Window-Inminutes:
+      - '5'
+      X-Ratelimit-Retry-Inseconds:
+      - '0'
+      X-Ratelimit-Window-Inseconds:
+      - '300'
+      X-Ratelimit-Limit:
+      - '150'
+      X-Ratelimit-Remaining:
+      - '147'
+      Cache-Control:
+      - no-cache, must-revalidate
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      Set-Cookie:
+      - fake_cookie;
+        path=/; expires=Mon, 16-Oct-23 22:16:20 GMT; domain=.shapeways.com; HttpOnly;
+        Secure; SameSite=None
+      - setting_billingCountryId=224; expires=Sun, 10-May-2122 21:46:20 GMT; Max-Age=3110400000;
+        path=/; domain=.shapeways.com
+      - setting_browseCurrencyCode=USD; expires=Sun, 10-May-2122 21:46:20 GMT; Max-Age=3110400000;
+        path=/; domain=.shapeways.com
+      - shapeways_guest=fake_client; expires=Sun, 10-May-2122
+        21:46:20 GMT; Max-Age=3110400000; path=/; domain=.shapeways.com
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Cf-Cache-Status:
+      - DYNAMIC
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 81737e70ac405aaf-VIE
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"result":"success","orderId":"1234567","productionOrderIds":["FAKEPOID1234","FAKEPOID1235"],"nextActionSuggestions":{"checkOrderStatus":"\/checkout\/receipt?orderId=1234567"}}'
+  recorded_at: Mon, 16 Oct 2023 21:46:20 GMT
+recorded_with: VCR 6.2.0

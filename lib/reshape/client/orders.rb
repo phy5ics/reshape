@@ -1,7 +1,16 @@
+require 'countries/global'
+
+  
 module Reshape
   class Client
     module Orders
 
+      # get an order by id
+      def order(id, options={}, raw=false)
+        get("/orders/#{id}/#{api_version}", options, raw)
+      end
+
+      # get a list of orders
       def orders(options={}, raw=false)
 
         get("/orders/#{api_version}", options, raw)
@@ -9,31 +18,59 @@ module Reshape
 
       def add_order(order_details, options={}, raw=false)
 
+        # check country code
+        # https://shopify.dev/docs/api/storefront/2023-04/enums/countrycode
+        #c = ISO3166::Country.find_country_by_alpha2("FR")
+
         # order deatils
+        #testMode (optional field, use value 1 to void the order placement)
         #firstName
         #lastName
         #country
         #state
         #city
         #address1
-        #address2
-        #address3
+        #address2 (optional)
+        #address3 (optional)
         #zipCode
         #phoneNumber
         #items
+        #
+        #{
+        #   "type":"object",
+        #   "description":"Item in your order",
+        #   "properties":{
+        #      "modelId":{
+        #         "type":"int",
+        #         "description":"Model id"
+        #      },
+        #      "materialId":{
+        #         "type":"int",
+        #         "description":"Material id"
+        #      },
+        #      "quantity":{
+        #         "type":"int",
+        #         "description":"Quantity of models in this material"
+        #      }
+        #   }
+        #}
+        #
         #incentives
+        #{
+        # "type":"string",
+        # "description":"Incentive code"
+        #}
         #paymentVerificationId
-        #paymentMethod
-        #shippingOption
-        #metadata
+        #paymentMethod : "credit_card"
+        #shippingOption : "Cheapest"
+        #manufacturingSpeed : "Economy"
+        #refNumber:
+        #metadata:
 
-        # just a stub
-        #post("/orders/#{api_version}", options.merge(order_details), raw)
+        options.merge!(order_details)
+        post("/orders/#{api_version}", options, raw)
+
         false
-      end
-
-      def order(id, options={}, raw=false)
-        get("/orders/#{id}/#{api_version}", options, raw)
       end
 
       def cart(options={}, raw=false)

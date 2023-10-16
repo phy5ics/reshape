@@ -48,6 +48,28 @@ get '/auth/:provider/callback' do
 end
 ```
 
+```
+gem 'oauth2'
+```
+
+```ruby
+key = ENV['SHAPEWAYS_CONSUMER_KEY']
+secret = ENV['SHAPEWAYS_CONSUMER_SECRET']
+auth_client = OAuth2::Client.new(key, secret, site: "https://api.shapeways.com", token_url: '/oauth2/token')
+access = auth_client.client_credentials.get_token
+
+token = access.token
+
+client = Reshape::Client.new({
+  consumer_token: ENV['SHAPEWAYS_CONSUMER_KEY'],
+  consumer_secret: ENV['SHAPEWAYS_CONSUMER_SECRET'],
+  oauth_token: token,
+  oauth_secret: nil
+})
+
+materials = client.materials
+```
+
 Check the examples directory for a full example using Sinatra.
 
 ## Tests

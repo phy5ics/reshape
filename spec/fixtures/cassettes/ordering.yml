@@ -1,0 +1,191 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.shapeways.com/oauth2/token
+    body:
+      encoding: UTF-8
+      string: grant_type=client_credentials
+    headers:
+      User-Agent:
+      - Faraday v1.10.3
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Authorization:
+      - Basic fake_token
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 14 Jul 2023 16:33:38 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Cache-Control:
+      - no-store
+      Pragma:
+      - no-cache
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - fake_cookie;
+        path=/; expires=Fri, 14-Jul-23 17:03:38 GMT; domain=.shapeways.com; HttpOnly;
+        Secure; SameSite=None
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7e6b2b207a0a4a66-TPE
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"access_token":"fake_token","token_type":"bearer","expires_in":3600}'
+  recorded_at: Fri, 14 Jul 2023 16:33:38 GMT
+- request:
+    method: get
+    uri: https://api.shapeways.com/orders/v1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.10.3
+      Authorization:
+      - Bearer fake_token
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 14 Jul 2023 16:33:39 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      X-Ratelimit-Oktogo-Inseconds:
+      - '0'
+      X-Ratelimit-Window-Inminutes:
+      - '5'
+      X-Ratelimit-Retry-Inseconds:
+      - '0'
+      X-Ratelimit-Window-Inseconds:
+      - '300'
+      X-Ratelimit-Limit:
+      - '150'
+      X-Ratelimit-Remaining:
+      - '149'
+      Cache-Control:
+      - no-cache, must-revalidate
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - fake_token;
+        path=/; expires=Fri, 14-Jul-23 17:03:39 GMT; domain=.shapeways.com; HttpOnly;
+        Secure; SameSite=None
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7e6b2b26afae6a93-TPE
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"result":"success","ordersCount":{"total":0,"placed":0,"in_production":0,"cancelled":0,"unknown":0,"shipped":0},"ordersStatus":[],"ordersInfo":null,"nextActionSuggestions":{"url":"offset=20"}}'
+  recorded_at: Fri, 14 Jul 2023 16:33:39 GMT
+- request:
+    method: get
+    uri: https://api.shapeways.com/orders/v1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.10.3
+      Authorization:
+      - Bearer fake_token
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 14 Jul 2023 16:33:53 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      X-Ratelimit-Oktogo-Inseconds:
+      - '0'
+      X-Ratelimit-Window-Inminutes:
+      - '5'
+      X-Ratelimit-Retry-Inseconds:
+      - '0'
+      X-Ratelimit-Window-Inseconds:
+      - '300'
+      X-Ratelimit-Limit:
+      - '150'
+      X-Ratelimit-Remaining:
+      - '148'
+      Cache-Control:
+      - no-cache, must-revalidate
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - fake_cookie;
+        path=/; expires=Fri, 14-Jul-23 17:03:53 GMT; domain=.shapeways.com; HttpOnly;
+        Secure; SameSite=None
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7e6b2b7e5acf4a4e-TPE
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"result":"success","ordersCount":{"total":0,"placed":0,"in_production":0,"cancelled":0,"unknown":0,"shipped":0},"ordersStatus":[],"ordersInfo":null,"nextActionSuggestions":{"url":"offset=20"}}'
+  recorded_at: Fri, 14 Jul 2023 16:33:53 GMT
+recorded_with: VCR 6.2.0

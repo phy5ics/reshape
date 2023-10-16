@@ -17,9 +17,9 @@ describe Reshape::Client do
       Reshape.reset
     end
 
-    it "should default to http://api.shapeways.com/" do
+    it "should default to https://api.shapeways.com/" do
       client = Reshape::Client.new
-      client.api_endpoint.should == 'http://api.shapeways.com/'
+      client.api_endpoint.should == 'https://api.shapeways.com/'
     end
 
     it "should be set " do
